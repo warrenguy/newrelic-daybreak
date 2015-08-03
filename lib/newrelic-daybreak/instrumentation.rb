@@ -37,13 +37,13 @@ DependencyDetection.defer do
 
       def delete(key) 
         NewRelic::Agent::Datastores.wrap("Daybreak", "delete", key) do
-          super(key, value)
+          super(key)
         end
       end
 
       def delete!(key)
         NewRelic::Agent::Datastores.wrap("Daybreak", "delete", key) do
-          super(key, value)
+          super(key)
         end
       end
 
